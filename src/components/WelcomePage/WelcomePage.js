@@ -1,7 +1,7 @@
 import '../WelcomePage/WelcomePage.css'
 import LogInForm from '../LogInForm/LogInForm'
 
-export default function WelcomePage(){
+export default function WelcomePage(props){
     return(
         <div className='welcome-content-container'>
             <img className='welcome-image' src='./images/welcomeimage.png'></img>
@@ -13,7 +13,7 @@ export default function WelcomePage(){
                         <img className='welcome-logo' src='./images/logo.png'></img>
                     </div>
                    
-                   <LogInForm>
+                   <LogInForm logIn={props.logIn}>
                    </LogInForm>
                 </div>
 

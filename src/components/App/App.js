@@ -3,11 +3,15 @@ import WelcomePage from "../WelcomePage/WelcomePage";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true)
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  function logIn(){
+    setLoggedIn(true);
+  }
 
   return (
     <>
-      {!loggedIn && <WelcomePage></WelcomePage>}
+      {!loggedIn && <WelcomePage logIn={logIn}></WelcomePage>}
       {loggedIn && <Header></Header>}
     </>
   );

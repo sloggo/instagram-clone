@@ -1,6 +1,6 @@
 import './LogInForm.css'
 
-export default function LogInForm(){
+export default function LogInForm(props){
     return(
         <>
             <form>
@@ -9,7 +9,7 @@ export default function LogInForm(){
                     <input className='login-input' placeholder='Password' type='text'></input>
                 </div>
 
-                <button className='login-submit' type='submit'>Log In</button>
+                <button className='login-submit' type='submit' onClick={props.logIn}>Log In</button>
             </form>
 
             <p className='login-or-container'><span className='login-or'>OR</span></p>
