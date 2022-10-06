@@ -36,6 +36,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 40px;
+    width: 100%;
 
     background-color: white;
     border: 1.5px solid #dcdcdc;

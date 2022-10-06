@@ -1,0 +1,46 @@
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-input-containers{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.login-input{
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background-color: #fafafa;
+    font-size: 13px;
+
+    padding: 10px 5px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #a8a8a8;
+    border-radius: 1px;
+ }
+
+.login-submit{
+    padding: 5px 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: #0894f4;
+
+    font-size: .9rem;
+    outline: none;
+ }
