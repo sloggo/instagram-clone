@@ -14,10 +14,12 @@ export default function Post(){
 
             <div className='post-controls'>
                 <img className='post-like' src='./images/heart.png'></img>
+                <img className='post-comment' src='./images/bubble-chat.png'></img>
+                <img className='post-share' src='./images/send.png'></img>
             </div>
 
             <div className='post-info'>
-
+                <p>Liked by user and ... more</p>
             </div>
 
             <div className='post-viewcomments'>
