@@ -1,5 +1,7 @@
 import Header from "../Header/Header";
 import WelcomePage from "../WelcomePage/WelcomePage";
+import MainContent from "../MainContent/MainContent";
+
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
     <>
       {!loggedIn && <WelcomePage logIn={logIn}></WelcomePage>}
       {loggedIn && <Header></Header>}
+      {loggedIn && <MainContent></MainContent>}
     </>
   );
 }
