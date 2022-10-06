@@ -1,4 +1,4 @@
-import '../LogInForm/LogInForm.css'
+import './LogInForm.css'
 
 export default function LogInForm(){
     return(

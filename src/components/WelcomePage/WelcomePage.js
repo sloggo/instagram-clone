@@ -1,5 +1,5 @@
 import '../WelcomePage/WelcomePage.css'
-import LogInForm from './LogInForm/LogInForm'
+import LogInForm from '../LogInForm/LogInForm'
 
 export default function WelcomePage(){
     return(

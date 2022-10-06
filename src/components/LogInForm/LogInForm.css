@@ -18,15 +18,15 @@ form{
     -webkit-appearance: none;
     appearance: none;
     border: 1px solid #dbdbdb;
-    border-radius: 1px;
+    border-radius: 3px;
     background-color: #fafafa;
-    font-size: 13px;
+    font-size: 12px;
 
-    padding: 10px 5px;
+    padding: 10px 7px;
     width: 100%;
 }
 
-input:focus {
+.login-input input:focus {
     outline: none;
     border: 1px solid #a8a8a8;
     border-radius: 1px;
