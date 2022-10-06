@@ -17,6 +17,10 @@ export default function WelcomePage(){
                    </LogInForm>
                 </div>
 
+                <div className='welcome-sidebar-box2'>
+                    <p>Don't have an account? <span className='welcome-signup'>Sign Up</span></p>
+                </div>
+
             </div>
         </div>
     )

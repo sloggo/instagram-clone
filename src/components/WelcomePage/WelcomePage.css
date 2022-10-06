@@ -21,8 +21,7 @@ body{
 }
 
 .welcome-logo-container{
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .welcome-sidebar{
@@ -30,6 +29,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 36vh;
+    gap: 20px;
 }
 
 .welcome-sidebar-box{
@@ -37,7 +37,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    padding: 40px 0;
     width: 100%;
 
     background-color: white;
@@ -45,5 +45,22 @@ body{
 }
 
 .welcome-logo{
-    width: 20vh;
+    width: 17vh;
+}
+
+.welcome-sidebar-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+
+    background-color: white;
+    border: 1.5px solid #dcdcdc;
+}
+
+.welcome-signup{
+    color: #149ff7;
+    font-weight: 700;
 }
