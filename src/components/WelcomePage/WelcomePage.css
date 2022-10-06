@@ -8,11 +8,12 @@ body{
 }
 
 .welcome-content-container{
+    height: 85vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     gap: 20px;
-    padding-top: 40px;
 }
 
 .welcome-image{
@@ -28,7 +29,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40vh;
+    width: 36vh;
 }
 
 .welcome-sidebar-box{
