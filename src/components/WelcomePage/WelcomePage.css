@@ -1,8 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+
 .welcome-content-container{
     display: flex;
+    justify-content: center;
+
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.welcome-image{
+    width: 40vh;
+}
+
+.welcome-logo-container{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .welcome-sidebar{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 40vh;
+}
+
+.welcome-sidebar-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border: 1.5px solid #dcdcdc;
+}
+
+.welcome-logo{
+    width: 20vh;
 }
