@@ -1,0 +1,37 @@
+.post-container{
+    background-color: white;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 10px;
+    width: 40vh;
+}
+
+.post-header{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-user-icon{
+    width: 3vh;
+}
+
+.post-username{
+ font-weight: 500;   
+}
+
+.post-content{
+    width: 100%;
+}
+
+.post-image{
+    width: 100%;
+}
+
+.post-controls img{
+    width: 2.2vh;
+}
+
+.post-controls{
+    padding: 7px 0;
+}
