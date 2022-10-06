@@ -45,3 +45,39 @@ input:focus {
     font-size: .9rem;
     outline: none;
  }
+
+ .login-or-container{
+    padding-top: 17px;
+    width: 75%; 
+    text-align: center; 
+    border-bottom: 1px solid rgb(146, 146, 146); 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ }
+
+ .login-or{
+    font-size: 0.85rem;
+    background:#fff; 
+    padding:0 10px; 
+    color: rgb(146, 146, 146);
+ }
+
+ .login-with-google-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #0065a8;
+ }
+
+ .login-with-google-logo{
+    width: 3vh;
+ }
+
+ .login-forgot{
+    margin-top: 15px;
+    font-size: .8rem;
+    font-weight: 100;
+    color: #727272;
+ }
