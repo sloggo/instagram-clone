@@ -1,0 +1,8 @@
+.welcome-content-container{
+    display: flex;
+}
+
+.welcome-sidebar{
+    display: flex;
+    flex-direction: column;
+}
