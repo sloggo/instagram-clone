@@ -1,15 +1,15 @@
 import './Post.css'
 
-export default function Post(){
+export default function Post(props){
     return(
         <div className='post-container'>
             <div className='post-header'>
                 <img className='post-user-icon' src='./images/placeholder-user.png'></img>
-                <p className='post-username'>Username</p>
+                <p className='post-username'>{props.post.username}</p>
             </div>
 
             <div className='post-content'>
-                <img className='post-image' src='./images/samplepost.png'></img>
+                <img className='post-image' src={props.post.content}></img>
             </div>
 
             <div className='post-controls'>
@@ -18,16 +18,16 @@ export default function Post(){
                 <img className='post-share' src='./images/send.png'></img>
             </div>
 
-            <p className='post-info'>Liked by user and ... more</p>
+            <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
-            <p className='post-viewcomments'>View all ... comments</p>
+            <p className='post-viewcomments'>View all {props.post.comments.length} comments</p>
 
-            <p className='post-timestamp'>2 DAYS AGO</p>
+            <p className='post-timestamp'>{props.post.timestamp} DAYS AGO</p>
 
             <div className='post-addcomment'>
                 <div className='post-addcomment-container'>
                     <input className='post-addcomment-input' type='text' placeholder='Add a comment...'></input>
-                    <button className='post-addcomment-button'type='submit'>Post</button>
+                    <button className='post-addcomment-button' type='submit'>Post</button>
                 </div>
             </div>
         </div>

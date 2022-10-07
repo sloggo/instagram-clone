@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "username": "username",
+        "caption": "caption",
+        "timestamp": "time",
+        "content": "./images/samplepost.png",
+        "likes": [
+            "user1", "user2", "user3"
+        ],
+        "comments": [
+            {
+                "id":3,
+                "username":"commentuser",
+                "comment":"comment",
+                "timestamp":"timestamp"
+            },
+
+            {
+                "id":4,
+                "username":"commentuser",
+                "comment":"comment",
+                "timestamp":"timestamp"
+            }
+        ]
+    },
+
+    {
+        "id": 2,
+        "username": "username",
+        "caption": "caption",
+        "timestamp": "time",
+        "content": "./images/samplepost.png",
+        "likes": [
+            "user1", "user2", "user3"
+        ],
+        "comments": []
+    }
+]
