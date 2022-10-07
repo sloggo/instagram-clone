@@ -22,10 +22,13 @@ export default function Post(){
 
             <p className='post-viewcomments'>View all ... comments</p>
 
-            <p className='post-timestamp'>2 days ago</p>
+            <p className='post-timestamp'>2 DAYS AGO</p>
 
             <div className='post-addcomment'>
-
+                <div className='post-addcomment-container'>
+                    <input className='post-addcomment-input' type='text' placeholder='Add a comment...'></input>
+                    <button className='post-addcomment-button'type='submit'>Post</button>
+                </div>
             </div>
         </div>
     )

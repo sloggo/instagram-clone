@@ -56,6 +56,52 @@
 .post-timestamp{
     padding:7px 15px;
     font-weight: 400;
-    font-size: .8rem;
+    font-size: .6rem;
     color: #aaaaaa;
-}   
+}
+
+.post-addcomment{
+    width: 93%;
+    padding:0 15px;
+    margin-top: 5px;
+    border-top: 1px solid rgb(230, 230, 230); ;
+}
+
+input.post-addcomment-input{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(114, 114, 114);
+}
+
+input.post-addcomment-input::placeholder{
+    color: #9c9c9c;
+}
+
+input.post-addcomment-input:focus{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+.post-addcomment-container{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-addcomment-button{
+    padding-left: auto;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    color: #0894f4;
+    background-color: white;
+
+    font-size: .9rem;
+    outline: none;
+}
