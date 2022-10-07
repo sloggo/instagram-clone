@@ -25,7 +25,7 @@ export default function Post(props){
                 <p className='post-caption'>{props.post.caption}</p>
             </div>
 
-            <p className='post-viewcomments'>View all {props.post.comments.length} comments</p>
+            <p className='post-viewcomments' onClick={props.viewPost} id={props.post.id}>View all {props.post.comments.length} comments</p>
 
             <p className='post-timestamp'>{props.post.timestamp} DAYS AGO</p>
 
