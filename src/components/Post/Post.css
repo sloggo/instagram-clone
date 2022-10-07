@@ -45,3 +45,17 @@
     font-size: 0.9rem;
     color: #555555;
 }
+
+.post-viewcomments{
+    padding:5px 15px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #aaaaaa;
+}  
+
+.post-timestamp{
+    padding:7px 15px;
+    font-weight: 400;
+    font-size: .8rem;
+    color: #aaaaaa;
+}   

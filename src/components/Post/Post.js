@@ -18,17 +18,11 @@ export default function Post(){
                 <img className='post-share' src='./images/send.png'></img>
             </div>
 
-            <div className='post-info'>
-                <p>Liked by user and ... more</p>
-            </div>
+            <p className='post-info'>Liked by user and ... more</p>
 
-            <div className='post-viewcomments'>
+            <p className='post-viewcomments'>View all ... comments</p>
 
-            </div>
-
-            <div className='post-timestamp'>
-
-            </div>
+            <p className='post-timestamp'>2 days ago</p>
 
             <div className='post-addcomment'>
 
