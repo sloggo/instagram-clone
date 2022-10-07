@@ -20,6 +20,11 @@ export default function Post(props){
 
             <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
+            <div className='post-caption'>
+                <p className='post-caption-username'>{props.post.username}</p>
+                <p className='post-caption'>{props.post.caption}</p>
+            </div>
+
             <p className='post-viewcomments'>View all {props.post.comments.length} comments</p>
 
             <p className='post-timestamp'>{props.post.timestamp} DAYS AGO</p>
