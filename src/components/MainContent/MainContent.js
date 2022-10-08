@@ -21,7 +21,7 @@ export default function MainContent(){
 
     return(
         <div className="main-content">
-            <PostPopup></PostPopup>
+            <PostPopup post={samplefeed[0]}></PostPopup>
             <Feed currentFeed={currentFeed} fetchFeed={fetchFeed} viewPost={viewPost}></Feed>
             <p>Suggestions</p>
         </div>
