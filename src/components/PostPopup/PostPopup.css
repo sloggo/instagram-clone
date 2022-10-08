@@ -46,3 +46,12 @@
 .postpopup-username{
     font-weight: 500;
 }
+
+.postpopup-commentsection{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    padding: 0px 15px;
+}

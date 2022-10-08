@@ -13,14 +13,16 @@
                 "id":3,
                 "username":"commentuser",
                 "comment":"comment",
-                "timestamp":"timestamp"
+                "timestamp":"timestamp",
+                "likes":["user4", "user5"]
             },
 
             {
                 "id":4,
                 "username":"commentuser",
                 "comment":"comment",
-                "timestamp":"timestamp"
+                "timestamp":"timestamp",
+                "likes":["user4"]
             }
         ]
     },

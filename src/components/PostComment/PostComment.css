@@ -1,0 +1,29 @@
+.postcomment-container{
+    display: flex;
+    gap: 15px;
+}
+
+.postcomment-info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.postcomment-info-top{
+    display: flex;
+    gap: 5px;
+    font-weight: 350;
+}
+
+.postcomment-info-bottom{
+    display: flex;
+    font-weight: 400;
+    color: gray;
+    font-size: 0.65rem;
+
+    gap: 8px;
+}
+
+.postcomment-likeinfo{
+    font-weight: 500;
+}

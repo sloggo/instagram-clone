@@ -12,11 +12,7 @@ export default function Post(props){
                 <img className='post-image' src={props.post.content}></img>
             </div>
 
-            <div className='post-controls'>
-                <img className='post-like' src='./images/heart.png'></img>
-                <img className='post-comment' src='./images/bubble-chat.png'></img>
-                <img className='post-share' src='./images/send.png'></img>
-            </div>
+            <PostControls></PostControls>
 
             <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
@@ -35,6 +31,16 @@ export default function Post(props){
                     <button className='post-addcomment-button' type='submit'>Post</button>
                 </div>
             </div>
+        </div>
+    )
+}
+
+export function PostControls(){
+    return(
+        <div className='post-controls'>
+            <img className='post-like' src='./images/heart.png'></img>
+            <img className='post-comment' src='./images/bubble-chat.png'></img>
+            <img className='post-share' src='./images/send.png'></img>
         </div>
     )
 }
