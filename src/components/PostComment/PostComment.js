@@ -1,13 +1,24 @@
 import './PostComment.css';
+import { useEffect, useState } from 'react'
 
 export default function PostComment(props){
+    const [postAuthor, setPostAuthor] = useState({name: 'placeholder'})
+
+    function handleUser(){
+        return props.getUser(props.comment.uid)
+    }
+
+    useEffect(() => {
+        handleUser().then(thing => setPostAuthor(thing))
+    },[])
+
     return(
         <div className="postcomment-container">
 
-            <img className='postpopup-icon' src='./images/placeholder-user.png'></img>
+            <img className='postpopup-icon' src={postAuthor.pfp ? postAuthor.pfp: './images/placeholder-user.png'}></img>
             <div className='postcomment-info'>
                 <div className='postcomment-info-top'>
-                    <p className='postpopup-username'>{props.comment.username}</p>
+                    <p className='postpopup-username'>{postAuthor.name}</p>
                     <p className='postcomment-comment'>{props.comment.comment}</p>
                 </div>
     

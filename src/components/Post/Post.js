@@ -4,14 +4,18 @@ import './Post.css'
 export default function Post(props){
     const [postAuthor, setPostAuthor] = useState({name: 'placeholder'})
 
+    function handleUser(){
+        return props.getUser(props.post.uid)
+    }
+
     useEffect(() => {
-        setPostAuthor(props.getUser(props.post.uid))
-    }, [])
+        handleUser().then(thing => setPostAuthor(thing))
+    },[])
 
     return(
         <div id={props.post.uid} className='post-container'>
             <div className='post-header'>
-                <img className='post-user-icon' src={'./images/placeholder-user.png'}></img>
+                <img className='post-user-icon' src={postAuthor.pfp ? postAuthor.pfp: './images/placeholder-user.png'}></img>
                 <p className='post-username'>{postAuthor.name}</p>
             </div>
 
@@ -28,7 +32,7 @@ export default function Post(props){
             <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
             { props.post.caption && <div className='post-caption-container'>
-                <p className='post-caption-username'>{props.post.username}</p>
+                <p className='post-caption-username'>{postAuthor.name}</p>
                 <p className='post-caption'>{props.post.caption}</p>
             </div>}
 

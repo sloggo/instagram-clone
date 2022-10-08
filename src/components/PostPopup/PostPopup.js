@@ -1,8 +1,18 @@
 import PostComment from '../PostComment/PostComment'
 import { BottomPost } from '../Post/Post'
 import '../PostPopup/PostPopup.css'
+import { useEffect, useState } from 'react'
 
 export default function PostPopup(props){
+    const [postAuthor, setPostAuthor] = useState({name: 'placeholder'})
+
+    function handleUser(){
+        return props.getUser(props.post.uid)
+    }
+
+    useEffect(() => {
+        handleUser().then(thing => setPostAuthor(thing))
+    },[])
     return(
         <div className="postpopup-container-bg" onClick={props.resetViewedPost}>
 
@@ -13,13 +23,13 @@ export default function PostPopup(props){
                 <div className='postpopup-sidebar-container'>
 
                     <div className='postpopup-sidebar-header'>
-                        <img className='postpopup-icon' src='./images/placeholder-user.png'></img>
-                        <p className='postpopup-username'>{props.post.username}</p>
+                        <img className='postpopup-icon' src={postAuthor.pfp ? postAuthor.pfp: './images/placeholder-user.png'}></img>
+                        <p className='postpopup-username'>{postAuthor.name}</p>
                     </div>
 
                     <div className='postpopup-commentsection'>
                         {props.post.comments.map(comment => {
-                            return <PostComment key={comment.id} comment={comment}></PostComment>
+                            return <PostComment key={comment.id} getUser={props.getUser} comment={comment}></PostComment>
                         })}
                     </div>
                     
@@ -33,7 +43,7 @@ export default function PostPopup(props){
                         <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
                         { props.post.caption && <div className='post-caption-container'>
-                            <p className='post-caption-username'>{props.post.username}</p>
+                            <p className='post-caption-username'>{postAuthor.name}</p>
                             <p className='post-caption'>{props.post.caption}</p>
                         </div>}
 

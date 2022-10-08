@@ -27,27 +27,35 @@ export default function MainContent(){
         })
 
         setCurrentFeed(newFeed)
+        console.log(newFeed)
     }
 
     async function getUser(uid){
-        const docRef = doc(db, 'users', uid)
-        const docSnap = await getDoc(docRef)
+        const docRef = await getDocs(collection(db, 'users'))
 
-        if(docSnap.exists()){
-            return docSnap.data()
+        let user = null;
+
+        docRef.forEach(doc => {
+            console.log(doc.data())
+            if(doc.data().uid === uid){
+                user = doc.data()
+            } else{
+                return
+            }
+        })
+        console.log(user)
+
+        if(user){
+            return user
         } else{
-            console.log('no user')
+            return null
         }
-    }
 
-    function fetchFeed(){
-        if(!(currentFeed === samplefeed)){
-            setCurrentFeed(samplefeed)
-        }
     }
 
     function viewPost(event){
-        const viewedPost = currentFeed.find(item => item.id === parseInt(event.target.id))
+        console.log(currentFeed)
+        const viewedPost = currentFeed.find(item => item.id === event.target.id)
         setCurrentlyViewedPost(viewedPost)
         console.log('Viewing post id:', viewedPost)
     }
@@ -58,8 +66,8 @@ export default function MainContent(){
 
     return(
         <div className="main-content">
-            {currentlyViewedPost && <PostPopup post={currentlyViewedPost} resetViewedPost={resetViewedPost}></PostPopup>}
-            <Feed currentFeed={currentFeed} fetchFeed={fetchFeed} viewPost={viewPost} getUser={getUser}></Feed>
+            {currentlyViewedPost && <PostPopup post={currentlyViewedPost} getUser={getUser} resetViewedPost={resetViewedPost}></PostPopup>}
+            <Feed currentFeed={currentFeed} fetchFeed={fetchData} viewPost={viewPost} getUser={getUser}></Feed>
             <p>Suggestions</p>
         </div>
     )

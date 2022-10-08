@@ -14,6 +14,7 @@
 
 .post-user-icon{
     width: 3vh;
+    border-radius: 100%;
 }
 
 .post-username{

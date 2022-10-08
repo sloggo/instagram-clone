@@ -44,6 +44,7 @@
 
 .postpopup-icon{
     width: 3.5vh;
+    border-radius: 100%;
 }
 
 .postpopup-username{
