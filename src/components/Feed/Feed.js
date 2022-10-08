@@ -5,7 +5,7 @@ export default function Feed(props){
     return(
         <div className='feed-container'>
             {props.currentFeed.map(post => {
-                return <Post key={post.id} post={post} viewPost={props.viewPost}></Post>
+                return <Post key={post.id} getUser={props.getUser} post={post} viewPost={props.viewPost}></Post>
             })}
         </div>
     )

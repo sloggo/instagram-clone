@@ -1,11 +1,18 @@
+import { useEffect, useState } from 'react'
 import './Post.css'
 
 export default function Post(props){
+    const [postAuthor, setPostAuthor] = useState({name: 'placeholder'})
+
+    useEffect(() => {
+        setPostAuthor(props.getUser(props.post.uid))
+    }, [])
+
     return(
-        <div className='post-container'>
+        <div id={props.post.uid} className='post-container'>
             <div className='post-header'>
-                <img className='post-user-icon' src='./images/placeholder-user.png'></img>
-                <p className='post-username'>{props.post.username}</p>
+                <img className='post-user-icon' src={'./images/placeholder-user.png'}></img>
+                <p className='post-username'>{postAuthor.name}</p>
             </div>
 
             <div className='post-content'>

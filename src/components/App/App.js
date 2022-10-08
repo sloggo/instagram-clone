@@ -2,13 +2,18 @@ import Header from "../Header/Header";
 import WelcomePage from "../WelcomePage/WelcomePage";
 import MainContent from "../MainContent/MainContent";
 import { getAuth, onAuthStateChanged, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore, query, getDocs, collection, where, addDoc } from "firebase/firestore";
+import { getFirestore, query, getDocs, collection, where, addDoc, orderBy, limit } from "firebase/firestore";
 
 import React, { useState, useEffect } from "react";
 import {firebaseApp, db, auth} from "../../firebase";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(() => {
+    
+  }, [db])
+
 
   onAuthStateChanged(auth, (user) => {
     if(user){
