@@ -39,9 +39,10 @@
     padding: 7px 15px;
 }
 
-.post-caption{
+.post-caption-container{
     margin-left: 15px;
     display: flex;
+    gap: 5px;
 
     font-size: 0.95rem;
     margin-bottom: 2px;

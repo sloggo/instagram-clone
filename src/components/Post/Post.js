@@ -20,7 +20,7 @@ export default function Post(props){
 
             <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
-            { props.post.caption && <div className='post-caption'>
+            { props.post.caption && <div className='post-caption-container'>
                 <p className='post-caption-username'>{props.post.username}</p>
                 <p className='post-caption'>{props.post.caption}</p>
             </div>}

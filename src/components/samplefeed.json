@@ -1,19 +1,19 @@
 [
     {
         "id": 1,
-        "username": "username",
-        "caption": "caption",
-        "timestamp": "time",
+        "username": "photographybybrian",
+        "caption": "Lights!",
+        "timestamp": "3",
         "content": "./images/samplepost.png",
         "likes": [
-            "user1", "user2", "user3"
+            "liamalsodoesphotography", "user2", "user3"
         ],
         "comments": [
             {
                 "id":3,
-                "username":"commentuser",
-                "comment":"comment",
-                "timestamp":"timestamp",
+                "username":"photosbyme",
+                "comment":"Great pic!",
+                "timestamp":"12 hours ago",
                 "likes":["user4", "user5"]
             },
 
@@ -29,12 +29,12 @@
 
     {
         "id": 2,
-        "username": "username",
-        "caption": "caption",
-        "timestamp": "time",
-        "content": "./images/samplepost.png",
+        "username": "hamburgsights",
+        "caption": "",
+        "timestamp": "12",
+        "content": "./images/samplepost2.png",
         "likes": [
-            "user1", "user2", "user3"
+            "germanylover123", "user2", "user3"
         ],
         "comments": []
     }
