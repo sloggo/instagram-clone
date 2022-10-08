@@ -12,14 +12,18 @@ export default function Post(props){
                 <img className='post-image' src={props.post.content}></img>
             </div>
 
-            <PostControls></PostControls>
+            <div className='post-controls'>
+                <img className='post-like' src='./images/heart.png'></img>
+                <img className='post-comment' src='./images/bubble-chat.png'></img>
+                <img className='post-share' src='./images/send.png'></img>
+            </div>
 
             <p className='post-info'>Liked by {props.post.likes[0]} and {(props.post.likes.length - 1)} more</p>
 
-            <div className='post-caption'>
+            { props.post.caption && <div className='post-caption'>
                 <p className='post-caption-username'>{props.post.username}</p>
                 <p className='post-caption'>{props.post.caption}</p>
-            </div>
+            </div>}
 
             <p className='post-viewcomments' onClick={props.viewPost} id={props.post.id}>View all {props.post.comments.length} comments</p>
 
@@ -31,16 +35,6 @@ export default function Post(props){
                     <button className='post-addcomment-button' type='submit'>Post</button>
                 </div>
             </div>
-        </div>
-    )
-}
-
-export function PostControls(){
-    return(
-        <div className='post-controls'>
-            <img className='post-like' src='./images/heart.png'></img>
-            <img className='post-comment' src='./images/bubble-chat.png'></img>
-            <img className='post-share' src='./images/send.png'></img>
         </div>
     )
 }
