@@ -10,7 +10,7 @@ export default function Header(props) {
             <div className='header-icons'>
                 <img src='./images/home.png'></img>
                 <img src='./images/add.png'></img>
-                <img onClick={props.logOut} src={props.getProfilePicture}></img>
+                <img className='header-pfp' onClick={props.logOut} src={props.user.photoURL}></img>
             </div>
         </header>
     )

@@ -45,10 +45,19 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header-icons{
+    height: 100%;
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .header-icons img{
-    width: 2.6vh;
+    width: 2.4vh;
+    height: 2.4vh;
+}
+
+img.header-pfp{
+    border-radius: 100%;
+    width: 3vh;
+    height: 3vh;
 }

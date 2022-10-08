@@ -53,7 +53,7 @@ function App() {
   return (
     <>
       {!loggedIn && <WelcomePage signInWithGoogle={signInWithGoogle}></WelcomePage>}
-      {loggedIn && <Header getProfilePicture={getProfilePicture} logOut={logOut}></Header>}
+      {loggedIn && <Header user={auth.currentUser} logOut={logOut}></Header>}
       {loggedIn && <MainContent></MainContent>}
     </>
   );
