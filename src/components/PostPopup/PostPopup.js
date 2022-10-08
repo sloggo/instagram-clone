@@ -4,7 +4,7 @@ import '../PostPopup/PostPopup.css'
 
 export default function PostPopup(props){
     return(
-        <div className="postpopup-container-bg">
+        <div className="postpopup-container-bg" onClick={props.resetViewedPost}>
 
             <div className='postpopup-container'>
 

@@ -15,13 +15,18 @@ export default function MainContent(){
     }
 
     function viewPost(event){
-        setCurrentlyViewedPost(event.target.id)
-        console.log('Viewing post id:', event.target.id)
+        const viewedPost = currentFeed.find(item => item.id === parseInt(event.target.id))
+        setCurrentlyViewedPost(viewedPost)
+        console.log('Viewing post id:', viewedPost)
+    }
+
+    function resetViewedPost(){
+        setCurrentlyViewedPost(null)
     }
 
     return(
         <div className="main-content">
-            {currentlyViewedPost && <PostPopup post={samplefeed[0]}></PostPopup>}
+            {currentlyViewedPost && <PostPopup post={currentlyViewedPost} resetViewedPost={resetViewedPost}></PostPopup>}
             <Feed currentFeed={currentFeed} fetchFeed={fetchFeed} viewPost={viewPost}></Feed>
             <p>Suggestions</p>
         </div>
