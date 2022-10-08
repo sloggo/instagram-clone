@@ -3,9 +3,14 @@ import WelcomePage from "../WelcomePage/WelcomePage";
 import MainContent from "../MainContent/MainContent";
 
 import React, { useState, useEffect } from "react";
+import firebaseApp from "../../firebase";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(() => {
+    console.log(firebaseApp)
+  }, [])
 
   function logIn(){
     setLoggedIn(true);
