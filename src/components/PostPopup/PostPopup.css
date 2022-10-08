@@ -13,17 +13,17 @@
     justify-content: center;
     align-items: center;
 
-    height: 97%;
+    height: 95%;
 }
 
 .postpopup-content{
-    height: 97%;
+    height: 95%;
 }
 
 .postpopup-sidebar-container{
     display: flex;
     flex-direction: column;
-    height: 97%;
+    height: 95%;
     border-radius: 0px 10px 10px 0px;
     width: 47vh;
 
@@ -39,6 +39,10 @@
     align-items: center;
 }
 
-.postpopup-sidebar-header-icon{
+.postpopup-icon{
     width: 3.5vh;
+}
+
+.postpopup-username{
+    font-weight: 500;
 }

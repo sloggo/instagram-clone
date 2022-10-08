@@ -11,8 +11,12 @@ export default function PostPopup(props){
                 <div className='postpopup-sidebar-container'>
 
                     <div className='postpopup-sidebar-header'>
-                        <img className='postpopup-sidebar-header-icon' src='./images/placeholder-user.png'></img>
-                        <p className='postpopup-sidebar-header-username'>{props.post.username}</p>
+                        <img className='postpopup-icon' src='./images/placeholder-user.png'></img>
+                        <p className='postpopup-username'>{props.post.username}</p>
+                    </div>
+
+                    <div className='postpopup-commentsection'>
+                        
                     </div>
 
                 </div>
