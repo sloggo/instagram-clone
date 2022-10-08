@@ -2,6 +2,10 @@ import './PostComment.css';
 
 export default function PostComment(){
     return(
-        <div className="postcomment-container"></div>
+        <div className="postcomment-container">
+
+            
+
+        </div>
     )
 }
