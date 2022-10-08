@@ -19,9 +19,9 @@
 
             {
                 "id":4,
-                "username":"commentuser",
-                "comment":"comment",
-                "timestamp":"timestamp",
+                "username":"jennifer_pics",
+                "comment":"Woah this is incredible!",
+                "timestamp":"1 day ago",
                 "likes":["user4"]
             }
         ]
