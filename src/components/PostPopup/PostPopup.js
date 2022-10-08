@@ -1,3 +1,4 @@
+import PostComment from '../PostComment/PostComment'
 import '../PostPopup/PostPopup.css'
 
 export default function PostPopup(props){
@@ -16,7 +17,9 @@ export default function PostPopup(props){
                     </div>
 
                     <div className='postpopup-commentsection'>
-                        
+                        {props.post.comments.map(comment => {
+                            return <PostComment key={comment.id} comment={comment}></PostComment>
+                        })}
                     </div>
 
                 </div>
