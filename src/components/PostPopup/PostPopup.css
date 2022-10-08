@@ -1,4 +1,7 @@
 .postpopup-container-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +16,7 @@
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
+    height: 90%;
 }
 
 .postpopup-content{

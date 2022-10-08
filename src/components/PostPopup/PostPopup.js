@@ -6,7 +6,7 @@ export default function PostPopup(props){
     return(
         <div className="postpopup-container-bg" onClick={props.resetViewedPost}>
 
-            <div className='postpopup-container'>
+            <div className='postpopup-container' onClick={e => e.stopPropagation()}>
 
                 <img className='postpopup-content' src={props.post.content}></img>
 
