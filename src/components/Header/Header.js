@@ -1,6 +1,6 @@
 import '../Header/Header.css';
 
-export default function Header() {
+export default function Header(props) {
     return(
         <header className='header'>
             <img className='header-logo' src='./images/logo.png'></img>
@@ -10,7 +10,7 @@ export default function Header() {
             <div className='header-icons'>
                 <img src='./images/home.png'></img>
                 <img src='./images/add.png'></img>
-                <img src={'./images/placeholder-user.png'}></img>
+                <img onClick={props.logOut} src={props.getProfilePicture}></img>
             </div>
         </header>
     )

@@ -12,15 +12,16 @@ function App() {
 
   onAuthStateChanged(auth, (user) => {
     if(user){
-      logIn()
+      setLoggedIn(true)
     } else{
-      logOut()
+      setLoggedIn(false)
     }
   })
 
-  const signInWithGoogle = async () => {
-    const googleProvider = new GoogleAuthProvider()
+  async function signInWithGoogle(){
+    console.log('signinwithg')
     try{
+        const googleProvider = new GoogleAuthProvider()
         const res = await signInWithPopup(auth, googleProvider)
         const user = res.user;
         const userQuery = query(collection(db, "users"), where("uid", "==", user.uid))
@@ -36,25 +37,23 @@ function App() {
                 email: user.email
             })
         }
-
-        logIn()
     } catch (err){
         console.log(err)
     }
-}
+  }
 
-  function logIn(){
-    setLoggedIn(true);
+  function getProfilePicture(){
+    return auth.currentUser.photoURL
   }
 
   function logOut(){
-    setLoggedIn(false);
+    signOut(auth)
   }
 
   return (
     <>
-      {!loggedIn && <WelcomePage logIn={logIn} signInWithGoogle={signInWithGoogle}></WelcomePage>}
-      {loggedIn && <Header></Header>}
+      {!loggedIn && <WelcomePage signInWithGoogle={signInWithGoogle}></WelcomePage>}
+      {loggedIn && <Header getProfilePicture={getProfilePicture} logOut={logOut}></Header>}
       {loggedIn && <MainContent></MainContent>}
     </>
   );

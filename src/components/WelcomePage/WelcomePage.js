@@ -13,7 +13,7 @@ export default function WelcomePage(props){
                         <img className='welcome-logo' src='./images/logo.png'></img>
                     </div>
                    
-                   <LogInForm logIn={props.logIn}>
+                   <LogInForm signInWithGoogle={props.signInWithGoogle}>
                    </LogInForm>
                 </div>
 
