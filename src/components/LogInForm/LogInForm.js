@@ -9,7 +9,7 @@ export default function LogInForm(props){
                     <input className='login-input' placeholder='Password' type='text'></input>
                 </div>
 
-                <button className='login-submit' type='submit' onClick={props.signInWithGoogle}>Log In</button>
+                <button className='login-submit' type='submit' onClick={props.bypassLogIn}>Log In</button>
             </form>
 
             <p className='login-or-container'><span className='login-or'>OR</span></p>

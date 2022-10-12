@@ -51,13 +51,17 @@ function App() {
     return auth.currentUser.photoURL
   }
 
+  function bypassLogIn(){
+    setLoggedIn(true)
+  }
+
   function logOut(){
     signOut(auth)
   }
 
   return (
     <>
-      {!loggedIn && <WelcomePage signInWithGoogle={signInWithGoogle}></WelcomePage>}
+      {!loggedIn && <WelcomePage signInWithGoogle={signInWithGoogle} bypassLogIn={bypassLogIn}></WelcomePage>}
       {loggedIn && <Header user={auth.currentUser} logOut={logOut}></Header>}
       {loggedIn && <MainContent></MainContent>}
     </>
