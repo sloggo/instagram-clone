@@ -9,13 +9,15 @@ import {db, auth} from "../../firebase";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
-  const [guest, setGuest] = useState(false)
+  const [loggedInAs, setLoggedInAs] = useState(null)
 
   onAuthStateChanged(auth, (user) => {
     if(user){
       setLoggedIn(true)
+      setLoggedInAs('user')
     } else{
       setLoggedIn(false)
+      setLoggedInAs('user')
     }
   })
 
@@ -44,18 +46,27 @@ function App() {
   }
 
   function loginAsGuest(){
-    setGuest(true);
+    setLoggedIn(true);
+    setLoggedInAs('guest')
   }
 
   function logOut(){
     signOut(auth)
   }
 
+  function userOrGuestProfile(){
+    if(loggedInAs === 'user'){
+      return auth.currentUser
+    } else if(loggedInAs === 'guest'){
+      return {name: 'Guest', photoURL: './images/placeholder-user.png'}
+    }
+  }
+
   return (
     <>
-      {(!loggedIn && !guest) && <WelcomePage signInWithGoogle={signInWithGoogle} loginAsGuest={loginAsGuest}></WelcomePage>}
-      {(loggedIn || guest) && <Header user={auth.currentUser} guest={guest} logOut={logOut}></Header>}
-      {(loggedIn || guest) && <MainContent></MainContent>}
+      {!loggedIn && <WelcomePage signInWithGoogle={signInWithGoogle} loginAsGuest={loginAsGuest}></WelcomePage>}
+      {loggedIn && <Header userOrGuestProfile={userOrGuestProfile} logOut={logOut}></Header>}
+      {loggedIn && <MainContent></MainContent>}
     </>
   );
 }

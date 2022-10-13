@@ -15,6 +15,7 @@ export default function WelcomePage(props){
                    
                    <LogInForm signInWithGoogle={props.signInWithGoogle} loginAsGuest={props.loginAsGuest}>
                    </LogInForm>
+                   <div onClick={props.loginAsGuest}>Continue as Guest</div>
                 </div>
 
                 <div className='welcome-sidebar-box2'>

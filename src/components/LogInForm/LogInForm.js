@@ -22,8 +22,6 @@ export default function LogInForm(props){
             <p className='login-forgot'>Forgot Password?</p>
 
             <p className='login-or-container'><span className='login-or'>OR</span></p>
-
-            <button className='login-submit' type='submit' onClick={props.loginAsGuest}>Continue as Guest</button>
         </>
         
     )
