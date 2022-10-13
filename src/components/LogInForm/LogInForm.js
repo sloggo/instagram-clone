@@ -9,17 +9,21 @@ export default function LogInForm(props){
                     <input className='login-input' placeholder='Password' type='text'></input>
                 </div>
 
-                <button className='login-submit' type='submit' onClick={props.bypassLogIn}>Log In</button>
+                <button className='login-submit' type='submit' onClick={props.signInWithGoogle}>Log In</button>
             </form>
 
             <p className='login-or-container'><span className='login-or'>OR</span></p>
 
             <div className='login-with-google-container' onClick={props.signInWithGoogle}>
-                <img className='login-with-google-logo' src='./images/googlelogo.png'></img>
+                <img className='login-with-google-logo' src='./images/googlelogo.png' alt='Google Logo'></img>
                 <p>Log In with Google</p>
             </div>
 
             <p className='login-forgot'>Forgot Password?</p>
+
+            <p className='login-or-container'><span className='login-or'>OR</span></p>
+
+            <button className='login-submit' type='submit' onClick={props.loginAsGuest}>Continue as Guest</button>
         </>
         
     )

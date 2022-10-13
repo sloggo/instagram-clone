@@ -4,16 +4,16 @@ import LogInForm from '../LogInForm/LogInForm'
 export default function WelcomePage(props){
     return(
         <div className='welcome-content-container'>
-            <img className='welcome-image' src='./images/welcomeimage.png'></img>
+            <img className='welcome-image' src='./images/welcomeimage.png' alt='Instagram App'></img>
 
             <div className='welcome-sidebar'>
 
                 <div className='welcome-sidebar-box'>
                     <div className='welcome-logo-container'>
-                        <img className='welcome-logo' src='./images/logo.png'></img>
+                        <img className='welcome-logo' src='./images/logo.png' alt='Instagram Logo'></img>
                     </div>
                    
-                   <LogInForm signInWithGoogle={props.signInWithGoogle}>
+                   <LogInForm signInWithGoogle={props.signInWithGoogle} loginAsGuest={props.loginAsGuest}>
                    </LogInForm>
                 </div>
 
